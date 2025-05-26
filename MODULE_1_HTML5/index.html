@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Community Event Portal</title>
+  <link rel="icon" href="img/logo.jpg"/>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      background: #f4f4f9;
+      color: #333;
+    }
+
+    header {
+      background: #004080;
+      color: white;
+      padding: 15px 30px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    header img {
+      height: 50px;
+      border-radius: 50%;
+    }
+
+    header h4 {
+      margin-left: 20px;
+      flex-grow: 1;
+      font-size: 24px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 12px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      padding: 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    #welcomeBanner {
+      background-color: #cce5ff;
+      padding: 15px;
+      text-align: center;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      font-size: 18px;
+    }
+
+    table {
+      width: 100%;
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    .event-img {
+      width: 150px;
+      height: auto;
+      border-radius: 8px;
+      border: 3px solid #ccc;
+      transition: transform 0.2s ease;
+    }
+
+    .event-img:hover {
+      transform: scale(1.05);
+      border-color: #007bff;
+    }
+
+    .highlight {
+      color: #004080;
+      font-weight: bold;
+      font-size: 26px;
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    form {
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #ccc;
+      margin-top: 30px;
+    }
+
+    form h2, form h3 {
+      color: #004080;
+    }
+
+    label {
+      display: block;
+      margin: 10px 0 5px;
+      font-weight: bold;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 4px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    button {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      margin-top: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    #videoContainer {
+      margin-top: 40px;
+      text-align: center;
+    }
+
+    #promoVideo {
+      border: 2px solid #004080;
+      border-radius: 8px;
+    }
+
+    #videoMessage {
+      margin-top: 10px;
+      color: green;
+      font-weight: bold;
+    }
+
+    #locationDisplay {
+      font-style: italic;
+      color: #333;
+      margin-top: 10px;
+    }
+
+    footer {
+      background: #004080;
+      color: white;
+      text-align: center;
+      padding: 15px 0;
+      margin-top: 40px;
+    }
+
+    @media screen and (max-width: 768px) {
+      header {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      header h4 {
+        margin: 10px 0;
+      }
+
+      nav a {
+        display: block;
+        margin: 5px 0;
+      }
+
+      .event-img {
+        width: 100px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navigation -->
+  <header>
+    <img src="img/logo.jpg" alt="Community Event Logo">
+    <h4>Community Event Portal</h4>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#events">Events</a>
+      <a href="#contact">Contact</a>
+      <a href="help.html" target="_blank">Help</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Home Section -->
+    <section id="home">
+      <div id="welcomeBanner">
+        <h3>
+          Hello &nbsp;
+          <span style="color: red; font-weight: bold;">Special discount till May 30!</span>
+        </h3>
+      </div>
+    </section>
+
+    <!-- Events Section -->
+    <section id="events">
+      <h2 class="highlight">Past Events Gallery</h2>
+      <table>
+        <caption style="font-weight: bold; margin-bottom: 10px;">Recent Community Events</caption>
+        <tr>
+          <td><img src="img/one.jpg" class="event-img" alt="Event 1" title="Music Fest" ondblclick="enlargeImage(this)"></td>
+          <td><img src="img/two.jpg" class="event-img" alt="Event 2" title="Art Show" ondblclick="enlargeImage(this)"></td>
+          <td><img src="img/three.jpg" class="event-img" alt="Event 3" title="Food Drive" ondblclick="enlargeImage(this)"></td>
+        </tr>
+        <tr>
+          <td><img src="img/four.jpg" class="event-img" alt="Event 4" title="Parade" ondblclick="enlargeImage(this)"></td>
+          <td><img src="img/five.jpg" class="event-img" alt="Event 5" title="Cleanup" ondblclick="enlargeImage(this)"></td>
+          <td><img src="img/six.jpg" class="event-img" alt="Event 6" title="Fundraiser" ondblclick="enlargeImage(this)"></td>
+        </tr>
+      </table>
+
+      <!-- Registration Form -->
+      <form id="registrationForm" onsubmit="return handleRegistration(event)">
+        <h2>Registration Form</h2>
+        <label>Name</label>
+        <input type="text" id="name" required autofocus>
+        <label>Email</label>
+        <input type="email" id="email" required>
+        <label>Date</label>
+        <input type="date" id="date" required>
+        <label>Event Type</label>
+        <select id="eventType" onchange="savePreference()" required>
+          <option value="">-- Select --</option>
+          <option value="Picnic">Picnic</option>
+          <option value="Concert">Concert</option>
+          <option value="Workshop">Workshop</option>
+        </select>
+        <label>Message</label>
+        <textarea id="message" required></textarea>
+        <button type="submit">Submit</button>
+        <output id="confirmationMessage"></output>
+      </form>
+
+      <!-- Feedback Form -->
+      <form id="feedbackForm" onsubmit="return handleFeedback(event)">
+        <h3>Event Feedback</h3>
+        <label>Phone</label>
+        <input type="tel" id="phone" placeholder="" required>
+        <label>Select Event</label>
+        <select id="eventSelect" onchange="showFee()" required>
+          <option value="">-- Choose --</option>
+          <option value="Picnic - ₹1000">Picnic</option>
+          <option value="Concert - ₹2000">Concert</option>
+          <option value="Workshop - ₹1500">Workshop</option>
+        </select>
+        <p id="feeDisplay"></p>
+        <label>Feedback</label>
+        <textarea id="feedbackText" rows="4" onkeyup="countChars()" required></textarea>
+        <p>Characters typed: <span id="charCount">0</span></p>
+        <button type="submit">Submit Feedback</button>
+      </form>
+
+      <!-- Video -->
+      <div id="videoContainer">
+        <h3>Event Promo Video</h3>
+        <video id="promoVideo" width="320" height="240" controls oncanplay="videoReady()">
+          <source src="promo.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <p id="videoMessage"></p>
+      </div>
+
+      <!-- Geolocation -->
+      <div style="margin-top: 20px;">
+        <button onclick="findNearbyEvents()">Find Nearby Events</button>
+        <p id="locationDisplay"></p>
+        <button onclick="clearPreferences()">Clear Preferences</button>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+      <h2 class="highlight">Contact Us</h2>
+      <p>Email: communityportal@gmail.com</p>
+      <p>Phone: +91-9876543218</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Community Event Portal</p>
+  </footer>
+
+  <!-- JavaScript Functionality -->
+  <script>
+    function handleRegistration(event) {
+      event.preventDefault();
+      const name = document.getElementById('name').value;
+      const eventType = document.getElementById('eventType').value;
+      alert("Register successfully!!");
+      return false;
+    }
+
+    function handleFeedback(event) {
+      event.preventDefault();
+      alert("Feedback submitted successfully!");
+      return false;
+    }
+
+    function showFee() {
+      const sel = document.getElementById('eventSelect');
+      const fee = document.getElementById('feeDisplay');
+      fee.textContent = sel.value ? "Fee: " + sel.value.split(" - ")[1] : "";
+    }
+
+    function countChars() {
+      document.getElementById('charCount').textContent =
+        document.getElementById('feedbackText').value.length;
+    }
+
+    function enlargeImage(img) {
+      img.style.width = "200px";
+    }
+
+    function videoReady() {
+      document.getElementById('videoMessage').textContent = "Video is ready to play.";
+    }
+
+    window.onbeforeunload = function () {
+      if (document.getElementById('name').value || document.getElementById('email').value) {
+        return "You have unsaved changes. Are you sure you want to leave?";
+      }
+    };
+
+    function savePreference() {
+      localStorage.setItem('preferredEventType', document.getElementById('eventType').value);
+    }
+
+    window.onload = function () {
+      const stored = localStorage.getItem('preferredEventType');
+      if (stored) document.getElementById('eventType').value = stored;
+    };
+
+    function clearPreferences() {
+      localStorage.clear();
+      sessionStorage.clear();
+      alert("Preferences cleared.");
+    }
+
+    function findNearbyEvents() {
+      const loc = document.getElementById('locationDisplay');
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition((pos) => {
+          loc.textContent = `Your location: Lat ${pos.coords.latitude}, Lon ${pos.coords.longitude}`;
+        }, () => {
+          loc.textContent = "Unable to retrieve location.";
+        });
+      } else {
+        loc.textContent = "Geolocation not supported.";
+      }
+    }
+  </script>
+</body>
+</html>
