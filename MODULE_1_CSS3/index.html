@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Community Event Portal</title>
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Embedded Internal Style -->
+    <style>
+      body {
+        background-color: #f0f8ff; /* Light blue background */
+        font-family: "Roboto", sans-serif;
+      }
+    </style>
+    <!-- google fonts  -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header id="mainHeader">
+      <h1 style="color: red">Local Community Event Portal</h1>
+      <nav>
+        <ul class="navMenu">
+          <li><a href="home">Home</a></li>
+          <li><a href="events">Events</a></li>
+          <li><a href="about">About</a></li>
+          <li><a href="contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section class="eventCard">
+      <h2>Flower Festival</h2>
+      <h3>Yercaud, Tamil Nadu</h3>
+      <br />
+      <p>Join us for seeing the beautiful flowers festival.</p>
+      <br />
+      <button class="cta-button">Register Now</button>
+    </section>
+
+    <section class="eventCard">
+      <h2>Art Fair - Exhibitions</h2>
+      <h3>Chennai, Tamil Nadu</h3>
+      <br />
+      <p>Explore local art and meet the artists behind the masterpieces.</p>
+      <br />
+      <button class="cta-button">Register Now</button>
+    </section>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Event Name</th>
+          <th>Date</th>
+          <th>Location</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Community Cleanup</td>
+          <td>June 19, 2025</td>
+          <td>Central park, Namakkal</td>
+          <td>Upcoming</td>
+        </tr>
+        <tr>
+          <td>Food Drive</td>
+          <td>May 26, 2025</td>
+          <td>City Hall, Madurai</td>
+          <td>Ongoing</td>
+        </tr>
+        <tr>
+          <td>Music Concert</td>
+          <td>November 26, 2025</td>
+          <td>Anna Nagar, Chennai</td>
+          <td>Upcoming</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <form>
+      <label for="name">Name:</label>
+      <input type="text" id="name" class="selected" />
+      <br />
+      <label for="email">Email:</label>
+      <input type="email" />
+    </form>
+  </body>
+</html>

@@ -1,0 +1,199 @@
+/* Reset styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Header styles */
+#mainHeader {
+  background-color: #004080;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+#mainHeader h1 {
+  color: red;
+  margin-bottom: 10px;
+}
+
+/* Navigation styles */
+.navMenu {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 10px 0;
+}
+
+.navMenu li a {
+  color: white;
+  text-decoration: none;
+  padding: 5px 10px;
+  transition: all 0.3s ease;
+}
+
+.navMenu li a:hover {
+  text-decoration: underline;
+}
+
+.navMenu li a:active {
+  color: yellow;
+}
+
+.navMenu li a:visited {
+  color: lightgray;
+}
+
+/* Element Selector  */
+h2 {
+  font-size: 24px;
+  color: #003366;
+  margin-bottom: 10px;
+}
+
+/* Class Selector  */
+.eventCard {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 15px;
+  margin: 10px;
+  background-color: #f9f9f9;
+}
+
+/* Grouping Selecto  */
+h3, p {
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+/* HEX and RGBA  */
+body {
+  color: #003366; 
+  background-color: rgba(240, 248, 255, 0.9); 
+}
+
+/* add background image with fallback color  */
+body {
+  background-color: #e0f7fa; /* Fallback color */
+  background-image: url('images/cityscape.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Linear Gradient */
+h2 {
+  background: linear-gradient(to right, #004080, #66ccff);
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* Typography: Fonts and Text  */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+h1, h2 {
+  font-weight: 700;
+  font-style: normal;
+}
+
+.quote {
+  font-style: italic;
+  font-size: 18px;
+}
+
+/* Link and List Styling */
+a:link {
+  color: #004080;        
+  text-decoration: none;
+}
+
+a:hover {
+  color: #66ccff;        
+  text-decoration: underline;
+}
+
+a:active {
+  color: #ffcc00;        
+}
+
+a:visited {
+  color: #999999;         
+}
+
+/* Table container styling */
+table {
+  width: 100%;
+  border-collapse: collapse; 
+  text-align: center;        
+  font-family: Arial, sans-serif;
+}
+
+/* Table header cells */
+th {
+  background-color: #004080; 
+  color: white;
+  padding: 12px;
+  border: 1px solid #ccc;
+}
+
+/* Table data cells */
+td {
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+/* Zebra striping for rows */
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.eventCard {
+  border: 2px solid #004080;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+}
+
+form {
+  width: 90%;
+  max-width: 400px;
+  margin: 20px auto;
+  font-family: 'Roboto', sans-serif;
+}
+
+form label {
+  display: block;
+  margin-top: 15px;
+  font-weight: 600;
+}
+
+form input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  font-size: 1rem;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: border-color 0.3s ease;
+}
+
+form input:focus {
+  outline: 3px solid #ff6600;
+  outline-offset: 2px;
+  border-color: #ff6600;
+}
+
+
+
+
+
